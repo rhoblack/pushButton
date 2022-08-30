@@ -1,6 +1,6 @@
 #include "Button.h"
 #include "wiringPi.h"
-
+ 
 Button::Button(int pin)
     : pinNumber(pin), prevState(RELEASED)
 {

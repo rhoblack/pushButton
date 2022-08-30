@@ -1,6 +1,6 @@
 #ifndef __BUTTON_H__
 #define __BUTTON_H__
-
+ 
 enum {NO_ACTIVE, PUSH_ACTIVE, RELEASE_ACTIVE};
 
 class Button
