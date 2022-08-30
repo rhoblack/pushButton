@@ -1,21 +1,20 @@
 #include <iostream>
 #include "Led.h"
+#include "Button.h"
 #include <unistd.h>
  
 int main()
 {
     std::cout << "Hello World!" << std::endl;
     Led led1(24);
-    Led *led2 = new Led(25);
+    Button button(27);
 
     while(1)
     {
-        led1.Toggle();
-        led2->On();
-        usleep(100000);
-        led1.Toggle();
-        led2->Off();
-        usleep(100000);
+        if (button.getState() == RELEASE_ACTIVE) {
+            led1.Toggle();
+        }
+        usleep(50000);
     }
     return 0;
 }
